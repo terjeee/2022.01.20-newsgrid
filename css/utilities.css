@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+
+/* --- Fargekart --- */
+
+:root {
+  --black: #080F0F;
+  --black-shade: #202626;
+  --black-shade-2: #393e3e;
+  --white: #fff;
+  --white-shade: #FFFDF7;
+  --grey: #848681;
+  --red: #c72727;
+  --red-shade: #d25252;
+  --orange: #F58A07;
+  --blue: #3454D1;
+  --purple: #9448BC;
+
+  --max-width-navbar: 1000px;
+  --max-width: 960px;
+}
+
+/* --- Universal Styling --- */
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'News Cycle', sans-serif;
+  font-size: 1.6rem;
+  background: var(--white);
+  color: var(--black);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Denne boksen med universal styling for størrelse er en dårlig ide, bruk heller var(--) */
+h1, h2, h3, h4, h5 {line-height: 1.3; font-weight: bold;}
+h6 {font-size: 1.8rem; font-weight: bold; font-size: 1.7rem;}
+p {line-height: 1.5;}
+img {width: 100%;}
+li {list-style: none;}
+a {text-decoration: none; color: var(--white);}
+
+/* --- :active (tab/site) --- */
+
+#menu--active {
+  background: var(--red) !important;
+  color: var(--white) !important;
+}
+
+/* --- Button --- */
+
+.btn {
+  display: inline-block;
+  border-radius: 0.25rem;
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+
+.btn--orange {
+  background: var(--orange);
+}
+
+/* --- Tags --- */
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin: 0 !important;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--white);
+  border-radius: 1.5rem;
+}
+
+.tag--sports {background: var(--orange);}
+.tag--technology {background: var(--blue);}
+.tag--entertainment {background: var(--purple);}
+
+/* ---  --- */

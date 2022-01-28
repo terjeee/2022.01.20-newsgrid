@@ -1,0 +1,269 @@
+/* --- Navbar --- */
+
+.navbar {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width-navbar);
+  padding: 1rem 1.5rem;
+  /* Margin: 0 auto; = center container*/
+  margin: 0 auto;
+}
+
+.navbar__logo {
+  display: block;
+  width: 16rem;
+}
+
+.navbar__socials {font-size: 2.5rem;}
+.navbar__socials i {padding: 0 0.35rem;}
+
+.navbar__socials .fb,
+.navbar__socials .ig,
+.navbar__socials .tw, 
+.navbar__socials .yt {
+  color: var(--black);
+  transition: 0.15s ease-out;
+}
+
+.navbar__socials .fb:hover,
+.navbar__socials .ig:hover,
+.navbar__socials .tw:hover, 
+.navbar__socials .yt:hover {
+  /* transform: scale(1.15); */
+  transform: translate(0, -0.5rem);
+}
+
+.navbar__menu {display: flex;}
+
+.navbar__menu a {
+  color: var(--black);
+  padding: 0.65rem 1rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  transition: a 0.3s ease-in-out;
+}
+
+.navbar__menu a:hover p{
+  transform: scale(1.05);
+}
+
+/* --- Header --- */
+
+.header {
+  height: 50vh;
+  background: url('../img/featured.jpg') left center/cover;
+  overflow: hidden;
+}
+
+.header .overlay {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+}
+
+.header .grid {
+  height: 100%;
+  max-width: var(--max-width-navbar);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header__content {
+  grid-column: 1 / span 10;
+  color: var(--white);
+  padding: 0 4rem;
+}
+
+.header__content h3 {
+  margin: 0.5rem 0;
+  font-size: 3.5rem;
+}
+
+.header__content p {
+  font-size: clamp(1rem, 1.8rem, 1.8rem);
+}
+
+.header__content a {
+  padding: 0.65rem 2.5rem;
+  background: var(--red);
+  color: var(--white);
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+
+  transition: 0.15s ease-out;
+}
+
+.header__content a:hover {
+  background: var(--red-shade);
+  ;
+}
+
+/* --- Main, Article ---  */
+
+.main {
+  padding: 4rem;
+}
+
+.main .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.main .article01 {
+  grid-column: 1 / span 2;
+}
+
+.main .article03, 
+.main .article04, 
+.main .article05 {
+  grid-row: 2 / span 2;
+}
+
+.main .article07 {
+  grid-column: 2 / span 2;
+}
+
+.main [class*="article0"] {
+  padding: 1.5rem;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 2px 0px;
+
+  transition: 0.15s ease-out;
+}
+
+.main .article01,
+.main .article07 {
+  display: flex;
+  gap: 2rem;
+}
+
+.main .article01 > *,
+.main .article07 > * {
+  width: 100%;
+}
+
+.main .article02 {
+  background: var(--black-shade);
+  color: var(--white) ;
+}
+
+.main .article03,
+.main .article04,
+.main .article05 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+}
+
+.main .article06 {
+  background: var(--red);
+  color: var(--white);
+}
+
+.main img {
+  border-radius: 0.5rem;
+}
+
+.main .article03 img,
+.main .article04 img,
+.main .article05 img {
+  padding-bottom: 0.5rem;
+}
+
+.main [class*="article"] p {
+  padding: 0.5rem 0;
+}
+
+.main [class*="article"] h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-top: 0.25rem;
+}
+
+/* --- Footer --- */
+
+.footer {
+  background: var(--black-shade);
+  color: var(--white);
+}
+
+.footer h3 {font-size: 1.8rem; padding-bottom: 1.5rem;}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: var(--max-width-navbar);
+  padding: 4rem 2rem 2rem 2rem;
+  margin: 0 auto;
+  gap: 1rem 1.5rem;
+}
+
+.footer__about {
+  margin: 0 auto;
+}
+
+.footer__about img {
+  width: 12rem;
+}
+
+.footer__links {
+  padding: 0 40% 0 20%;
+}
+
+.footer__links li {
+  padding-bottom: 0.75rem;
+}
+
+.footer__links a:hover {
+  color: var(--red);
+}
+
+.footer__newsletter input {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.5rem;
+  margin-top: 1.5rem;
+  border: none;
+}
+
+.footer__newsletter input[type="email"]:focus {
+  outline: 0.1rem solid var(--red);
+} 
+
+.footer__newsletter input[type="submit"] {
+  color: var(--white);
+  background: var(--red);
+}
+
+.footer__newsletter input[type="submit"]:hover {
+  background: var(--red-shade);
+  cursor: pointer;
+}
+
+.footer__copyright {
+  grid-column: 1 / span 4;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.footer__copyright p {
+  padding: 1rem 0;
+  background: var(--black-shade-2);
+}
