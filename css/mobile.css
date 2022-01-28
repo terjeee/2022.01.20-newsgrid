@@ -11,7 +11,9 @@ body {
 
 .main .article03 img, 
 .main .article04 img, 
-.main .article05 img {display: none;}
+.main .article05 img {
+  display: none;
+}
 
 .main .article01 {
   flex-direction: column-reverse;
@@ -100,6 +102,8 @@ body {
     width: 100%;
   }
 }
+
+/* --- Mini mobile --- */
 
 @media(max-width: 361px) {
   .header__content {
